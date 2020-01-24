@@ -1,0 +1,13 @@
+D:\projekty\Notatnik\Notatnik\bin\Debug\netstandard2.0\Notatnik.deps.json
+D:\projekty\Notatnik\Notatnik\bin\Debug\netstandard2.0\Notatnik.dll
+D:\projekty\Notatnik\Notatnik\bin\Debug\netstandard2.0\ref\Notatnik.dll
+D:\projekty\Notatnik\Notatnik\bin\Debug\netstandard2.0\Notatnik.pdb
+D:\projekty\Notatnik\Notatnik\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\projekty\Notatnik\Notatnik\obj\Debug\netstandard2.0\Notatnik.AssemblyInfoInputs.cache
+D:\projekty\Notatnik\Notatnik\obj\Debug\netstandard2.0\Notatnik.AssemblyInfo.cs
+D:\projekty\Notatnik\Notatnik\obj\Debug\netstandard2.0\XamlC.stamp
+D:\projekty\Notatnik\Notatnik\obj\Debug\netstandard2.0\Notatnik.dll
+D:\projekty\Notatnik\Notatnik\obj\Debug\netstandard2.0\ref\Notatnik.dll
+D:\projekty\Notatnik\Notatnik\obj\Debug\netstandard2.0\Notatnik.pdb
+D:\projekty\Notatnik\Notatnik\obj\Debug\netstandard2.0\strony\glowna_View.xaml.g.cs
+D:\projekty\Notatnik\Notatnik\obj\Debug\netstandard2.0\strony\notatka_View.xaml.g.cs

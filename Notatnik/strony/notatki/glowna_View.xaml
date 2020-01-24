@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Notatnik.strony.glowna_View"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="cpNotatknik"
+    Title="Notatnik"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+
+        <Grid Margin="0,0,0,0" Padding="0,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="5*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid
+                Grid.Row="0"
+                Grid.Column="0"
+                Padding="0,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="60" />
+                </Grid.ColumnDefinitions>
+                <Grid
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    Padding="0,0,0,0"
+                    HeightRequest="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*" />
+                    </Grid.ColumnDefinitions>
+
+                    <BoxView
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        BackgroundColor="#ad8532"
+                        HeightRequest="20"
+                        HorizontalOptions="FillAndExpand"
+                        Opacity="0.75"
+                        VerticalOptions="Fill" />
+
+                    <BoxView
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        BackgroundColor="#ad8532"
+                        HeightRequest="20"
+                        HorizontalOptions="FillAndExpand"
+                        Opacity="0.5"
+                        VerticalOptions="Fill" />
+
+                    <BoxView
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        BackgroundColor="#ad8532"
+                        HeightRequest="20"
+                        HorizontalOptions="FillAndExpand"
+                        Opacity="0.25"
+                        VerticalOptions="Fill" />
+                </Grid>
+                <Button
+                    x:Name="btnDodaj"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Clicked="btnDodaj_Clicked"
+                    HorizontalOptions="FillAndExpand"
+                    Pressed="btnDodaj_Pressed"
+                    Released="btnDodaj_Released"
+                    StyleClass="Dodaj"
+                    Text="+"
+                    VerticalOptions="FillAndExpand" />
+            </Grid>
+            <Frame
+                x:Name="fDodajPokazNotatke"
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="0,0,0,0"
+                Padding="5,5,5,5"
+                HorizontalOptions="Fill"
+                VerticalOptions="StartAndExpand">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="7*" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        HorizontalOptions="StartAndExpand"
+                        StyleClass="DodajNotatka"
+                        Text="Tytuł:"
+                        VerticalOptions="CenterAndExpand" />
+                    <Entry
+                        x:Name="entryTytul"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Placeholder="Tytuł"
+                        VerticalOptions="Center" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        HorizontalOptions="StartAndExpand"
+                        StyleClass="DodajNotatka"
+                        Text="Opis:"
+                        VerticalOptions="CenterAndExpand" />
+
+                    <Entry
+                        x:Name="entryNotatka"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Placeholder="Wprowadź notatke"
+                        VerticalOptions="Center" />
+
+                </Grid>
+            </Frame>
+
+
+
+            <ListView
+                x:Name="lv_notatnik"
+                Grid.Row="2"
+                Grid.Column="0"
+                HasUnevenRows="True"
+                HorizontalOptions="Fill"
+                ItemTapped="Lv_notatnik_ItemTapped"
+                MinimumHeightRequest="150"
+                VerticalOptions="Start">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Height="150">
+                            <Frame>
+                                <Grid Margin="0,0,0,0" Padding="5,5,5,5">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="2*" />
+                                        <RowDefinition Height="2*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width=".2*" />
+                                        <ColumnDefinition Width="5*" />
+                                        <ColumnDefinition Width=".2*" />
+                                    </Grid.ColumnDefinitions>
+                                    <BoxView
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="3"
+                                        BackgroundColor="#f2ebc4"
+                                        HorizontalOptions="FillAndExpand"
+                                        Opacity="0.55"
+                                        VerticalOptions="FillAndExpand" />
+                                    <BoxView
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="3"
+                                        BackgroundColor="#ad8532"
+                                        HeightRequest="2"
+                                        HorizontalOptions="FillAndExpand"
+                                        Opacity="0.55"
+                                        VerticalOptions="End" />
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        HorizontalOptions="FillAndExpand"
+                                        StyleClass="Notatka"
+                                        Text="{Binding Tytul}"
+                                        VerticalOptions="CenterAndExpand" />
+
+                                    <BoxView
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="3"
+                                        BackgroundColor="#f2ebc4"
+                                        HorizontalOptions="FillAndExpand"
+                                        Opacity="0.55"
+                                        VerticalOptions="FillAndExpand" />
+                                    <BoxView
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="3"
+                                        BackgroundColor="#ad8532"
+                                        HeightRequest="2"
+                                        HorizontalOptions="FillAndExpand"
+                                        Opacity="0.55"
+                                        VerticalOptions="End" />
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        HorizontalOptions="FillAndExpand"
+                                        StyleClass="Notatka"
+                                        Text="{Binding Opis}"
+                                        VerticalOptions="CenterAndExpand" />
+
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+
+
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

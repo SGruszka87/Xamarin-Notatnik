@@ -1,0 +1,54 @@
+﻿navigationpage {
+    -xf-bar-background-color: #e8c887;
+    -xf-bar-text-color: white;
+    -xf-bar-color: black;
+    text-shadow: 8;
+    color: black;
+}
+
+^contentpage {
+    background-color: #e8c887;
+}
+
+label {
+    color: black;
+}
+label.DodajNotatka {
+    color: black;
+    font-size: 20;
+}
+    label.Notatka {
+        color: black;
+        font-size: 16;
+    } 
+
+entry{
+    color: black;
+}
+
+button {
+    background-color: #e8c887;
+    border-color: #ad8532;
+    border-bottom-width: 2;
+    opacity: 0.6;
+    border-radius: 15;
+}
+
+    button.Dodaj {
+        background-color: #e8c887;
+        opacity: 0.6;
+        border-color: #ad8532;
+        border-bottom-width:2;
+        border-radius: 50;
+        color:white;
+    }
+
+
+frame {
+    border-color: #e8c887;
+    border-radius: 15;
+}
+ListView {
+    border-color: #f2d69d;
+    background-color: transparent;
+}

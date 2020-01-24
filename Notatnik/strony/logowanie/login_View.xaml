@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Notatnik.strony.logowanie.login_View"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="cpLogowanie"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Frame
+            x:Name="fLogowanie"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <StackLayout Orientation="Vertical">
+                <Image x:Name="imgLogo" />
+                <Label
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Login:"
+                    VerticalOptions="CenterAndExpand" />
+                <Entry
+                    x:Name="entryLogin"
+                    Placeholder="Login"
+                    WidthRequest="200" />
+
+                <Label
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Hasło"
+                    VerticalOptions="CenterAndExpand" />
+                <Entry
+                    x:Name="entryHaslo"
+                    IsPassword="True"
+                    Placeholder="Hasło"
+                    WidthRequest="200" />
+
+                <Button
+                    x:Name="btnLogowanie"
+                    Clicked="btnLogowanie_Clicked"
+                    Text="Zaloguj" />
+            </StackLayout>
+        </Frame>
+
+    </ContentPage.Content>
+</ContentPage>

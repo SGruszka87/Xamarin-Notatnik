@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Notatnik.strony.komunikat.komunikat_View"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="cpKomunikat"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Frame HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*" />
+                </Grid.ColumnDefinitions>
+
+                <Image
+                    x:Name="imgKomunikat"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+                <Label
+                    x:Name="lblKomunikat"
+                    Grid.Row="1"
+                    Grid.Column="0" />
+                <Button
+                    x:Name="btnWstecz"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Clicked="btnWstecz_Clicked"
+                    Text="Wstecz" />
+            </Grid>
+        </Frame>
+
+    </ContentPage.Content>
+</ContentPage>
